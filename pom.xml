@@ -69,6 +69,53 @@
             <artifactId>spring-restdocs-mockmvc</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--
+            - [2020-09-02] Application fail Log 적재를 위한 MongoDB dependency 추가
+            - maven central :
+            - guide : https://www.baeldung.com/spring-data-mongodb-tutorial
+        -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.data</groupId>-->
+<!--            <artifactId>spring-data-mongodb</artifactId>-->
+<!--            <version>3.0.3.RELEASE</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.data</groupId>-->
+<!--            <artifactId>spring-data-releasetrain</artifactId>-->
+<!--            <version>Lovelace-SR9</version>-->
+<!--            <type>pom</type>-->
+<!--            <scope>import</scope>-->
+<!--        </dependency>-->
+
+        <!--
+            - Maven Central URL : https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api
+            - [용석:2020-09-02] : Java Bean객체의 기본 유효성 검사를 위한 spring-boot-starter-validation 추가
+            - 참고 URL : https://meetup.toast.com/posts/223
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!--
+            - maven Central URL : https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+            - [용석:2020-09-02] : 객체 매핑을 위한 modelMapper dependency
+        -->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.3.8</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active:
+#      - DEV_TOMCAT
+      - LOCAL_TOMCAT
+#      - LOCAL_MONGO
+      - DEV_MONGO
+
+# SET : LOCAL_TOMCAT profiles
+---
+spring:
+  profiles: LOCAL_TOMCAT
+
+server:
+  port: 8080
+# SET : DEV_TOMCAT profiles
+---
+spring:
+  profiles: DEV_TOMCAT
+
+server:
+  port: 80
+
+---
+spring:
+  profiles: LOCAL_MONGO
+  data:
+    mongodb:
+      uri: mongodb://tester:1234@localhost:27017
+#    uri: mongodb://team-core:HappyEnding201910!@test-log.cluster-cghtjgokrsze.ap-northeast-2.docdb.amazonaws.com:27017
+#    host: localhost
+#    port: 27017
+#    authentication-database: testdb
+#    database: testdb
+#    username: tester
+#    password: 1234
+
+---
+spring:
+  profiles: DEV_MONGO
+  data:
+    mongodb:
+      uri: mongodb://team-core:HappyEnding201910!@test-log.cluster-cghtjgokrsze.ap-northeast-2.docdb.amazonaws.com:27017/test
